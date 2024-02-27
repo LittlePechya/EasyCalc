@@ -8,6 +8,8 @@ changePositiveValuesButton.addEventListener("click", () => {
     var newValues = prompt("Введите новые значения для положительных чисел (формат записи: 3 8 9.25 7):");
 
     if (newValues !== null) {
+        newValues = newValues.replace(",", "."); // Замена запятых на точки
+
         var parsedValues = newValues.trim().split(/\s+/).map(value => {
             var parsedValue = parseFloat(value);
             return isNaN(parsedValue) || parsedValue < 0 ? 0 : parsedValue;
@@ -30,6 +32,8 @@ changeNegativeValuesButton.addEventListener("click", () => {
     var newValues = prompt("Введите новые значения для отрицательных чисел (формат записи: 3 8 9.25 7):");
 
     if (newValues !== null) {
+        newValues = newValues.replace(",", "."); // Замена запятых на точки
+
         var parsedValues = newValues.trim().split(/\s+/).map(value => {
             var parsedValue = parseFloat(value);
             return isNaN(parsedValue) || parsedValue < 0 ? 0 : parsedValue;

@@ -13,22 +13,24 @@ function updateUndoButton() {
 
 positiveRow.addEventListener("click", function(event) {
     if (event.target.tagName === "BUTTON") {
-        var value = parseInt(valueElement.innerText);
-        var increment = parseInt(event.target.innerText);
+        var value = parseFloat(valueElement.innerText);
+        var increment = parseFloat(event.target.innerText);
         value += increment;
-        valueElement.innerText = value;
-        valueHistory.push(value);
+        var roundedValue = parseFloat(value.toFixed(2));
+        valueElement.innerText = roundedValue;
+        valueHistory.push(roundedValue);
         updateUndoButton();
     }
 });
 
 negativeRow.addEventListener("click", function(event) {
     if (event.target.tagName === "BUTTON") {
-        var value = parseInt(valueElement.innerText);
-        var decrement = parseInt(event.target.innerText);
+        var value = parseFloat(valueElement.innerText);
+        var decrement = parseFloat(event.target.innerText);
         value -= Math.abs(decrement);
-        valueElement.innerText = value;
-        valueHistory.push(value);
+        var roundedValue = parseFloat(value.toFixed(2));
+        valueElement.innerText = roundedValue;
+        valueHistory.push(roundedValue);
         updateUndoButton();
     }
 });
