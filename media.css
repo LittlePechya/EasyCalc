@@ -1,0 +1,10 @@
+@media screen and (max-width: 480px) {
+    #change-positive-values,
+    #change-negative-values {
+      font-size: 16px; /* Уменьшите размер шрифта на 24 пикселя */
+    }
+
+    .main-btn {
+        font-size: 20px;
+    }
+  }

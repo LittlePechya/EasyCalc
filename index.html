@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCalc</title>
+
+    <link rel="stylesheet" href="light-theme.css" id="theme-style">
+    <link rel="stylesheet" href="media.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="flex-row">
+            <div id="value">0</div>
+        </div>
+        <div class="helper-row">
+            <button class="help-button" id="undo-button"><i class="fas fa-undo"></i></button>
+            <button class="help-button" id="clean-button"><i class="fas fa-trash-alt"></i></button>
+            <button class="help-button" id="theme-button"><i class="fas fa-moon"></i></button>
+        </div>
+
+        <div class="flex-row" id="positive-row"></div>
+        <div class="flex-row" id="negative-row"></div>
+        <div class="flex-row">
+            <button class="main-btn" id="change-positive-values">Change positive values</button>
+            <button class="main-btn" id="change-negative-values">Change negative values</button>
+        </div>
+    </div>
+</body>
+<script src="calculator.js"></script>
+<script src="input.js"></script>
+<script src="theme-switch.js"></script>
+</html>
